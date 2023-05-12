@@ -11,8 +11,8 @@ library(cowplot)
 ################################################################################################################
 
 ### The final data with all SDM results, lake-level covariates, and Minnesota map shapefile
-EWM.clmchng_data=read_csv("Results/Final_MergedData.csv") 
-Minn.sf=read_sf(dsn="/Users/thom7552/UMNpostdoc/ProjectEWM/MinnEWM/MinnGISlayers", layer="Minn.map")
+EWM.clmchng_data=read_csv("Data/Final_MergedData.csv") 
+Minn.sf=read_sf(dsn="/Data", layer="Minn.map")
 
 ############################  
 ### Figure 1: Boxplots comparing predicted EWM invasion risk under current and future water temperature/GDD
