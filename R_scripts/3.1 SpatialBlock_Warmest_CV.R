@@ -7,12 +7,12 @@ library(sf)
 library(tidyverse)
 
 
-Minn.sf=read_sf(dsn="/Users/thom7552/UMNpostdoc/Projects/MinnEWM/MinnGISlayers", layer="Minn.map")
+Minn.sf=read_sf(dsn="Data/", layer="Minn.map")
 plot(Minn.sf$geometry)
 Minn.sf
 st_crs(Minn.sf)
 
-EWM.GCMs.data=read_csv("processed_data/EWM.prsabs95to15_AllGCMs_v2.csv")
+EWM.GCMs.data=read_csv("Data/EWM.prsabs95to15_AllGCMs_v2.csv")
 EWM.GCMs.data
 
 EWM.GCMs.sf=st_as_sf(EWM.GCMs.data, coords=c("LON","LAT"), crs=32615)
