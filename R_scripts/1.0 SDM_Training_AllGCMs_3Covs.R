@@ -13,7 +13,7 @@ setwd("~/UMNpostdoc/ProjectEWM/RProjects/EWM_ClimateChange")
 
 #### Step 1. Load the merged water temperature and EWM data developed in the previous modules and subset all
 #### 5 GCM based temperature estimates.
-EWM.GCMs.data=read_csv("processed_data/EWM.prsabs95to15_AllGCMs_v2.csv")
+EWM.GCMs.data=read_csv("Data/EWM.prsabs95to15_AllGCMs_v2.csv")
 EWM.GCMs.data
 
 #### Step 1a. GCM-ACCESS estimates
