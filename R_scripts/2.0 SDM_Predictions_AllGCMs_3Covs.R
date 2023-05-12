@@ -10,14 +10,14 @@ library(reshape2)
 ########  and future water temperature conditions.                                                         #########
 ####################################################################################################################
 
-### List all the models
+### List all the models that were generated and saved in Module 1.0
 RFmodels = list.files(path ="processed_data/TrainData/", pattern = "*Top3_.Rdata$")
 GAM_k3_models = list.files(path ="processed_data/TrainData/", pattern = "*k3.Rdata$")
 GAM_k10_models = list.files(path ="processed_data/TrainData/", pattern = "*GAM.Rdata$")
 
 
 ### Read the saved future temperature data for years 2040-2060
-EWM.futr.data=read_csv("processed_data/EWM.prsabs40to60_AllGCMs_v2.csv")
+EWM.futr.data=read_csv("Data/EWM.prsabs40to60_AllGCMs_v2.csv")
 colnames(EWM.futr.data)
 
 EWM.test.data_ACCESS.WtrTemp=EWM.futr.data%>%select('avg_secchi','roaddensity_density_mperha','ACCESS.avg.ann.gdd')
